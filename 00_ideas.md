@@ -58,6 +58,48 @@ Comenzar por un pequeño equipo y ver su viabilidad, con sensores comerciales qu
 
 ## Sistema Inteligente de Triaje y Resolución Automatizada
 
+### DESCRIPCIÓN:
+Desarrollo de un sistema de Inteligencia Artificial que combina modelos de clasificación supervisada con modelos de lenguaje (LLM y RAG) para analizar, categorizar y asignar automáticamente los tickets de soporte entrantes. Resuelve incidencias recurrentes sin intervención humana y asiste a los técnicos proponiendo respuestas basadas en la base de conocimiento interna.
+
+### PROBLEMA:
+Algunos de los problemas actuales a los que nos enfrentamos son:
+* (Principal) Tiempos de espera excesivos para la resolución de tickets por parte de los clientes.
+* Cuellos de botella operativos por la clasificación manual de cientos de peticiones diarias.
+* Redirección ineficiente de tickets (rebotes constantes entre departamentos) por diagnósticos iniciales erróneos.
+* Saturación del equipo de soporte resolviendo dudas repetitivas ya documentadas.
+
+### USUARIO:
+Quién podría comprar este tipo de producto:
+* Director de Soporte Técnico / Helpdesk: Necesita métricas de eficiencia, reducción de costes y control de tiempos.
+* Técnicos de Soporte (L1/L2): Buscan automatizar el triaje tedioso y recibir borradores de respuestas.
+* Cliente Final: Exige respuestas inmediatas y soluciones precisas sin ser rebotado.
+
+### SOLUCIÓN ACTUAL:
+Triaje completamente manual realizado por operadores o sistemas rígidos basados en palabras clave que fallan constantemente, provocando acumulación de tickets en cola.
+
+### VALOR:
+* Reducción drástica del tiempo medio de resolución (MTTR).
+* Eliminación de tareas repetitivas de clasificación manual, liberando tiempo para casos complejos.
+* Erradicación de los rebotes ineficientes de tickets entre departamentos.
+* Aumento directo de la satisfacción del cliente (CSAT).
+
+### DATOS CANDIDATOS:
+Algunos datos que necesitamos recoger:
+* Histórico de tickets anteriores (asunto, cuerpo del mensaje, categoría, prioridad y tiempo empleado).
+* Bases de conocimiento internas, FAQs y manuales técnicos (KMS).
+* Registros de satisfacción e historial de interacción de los clientes.
+
+### MVP:
+En principio podríamos comenzar con un modelo de clasificación entrenado para un dominio acotado (ej. incidencias de acceso o software), con un panel interactivo que muestre la categoría predicha y sugiera una respuesta automática generada mediante RAG lista para ser validada por el técnico.
+
+### VIABILIDAD:
+Comenzar por un pequeño departamento para ver su viabilidad, utilizando datasets públicos estructurados de soporte al cliente (como *IT Helpdesk Tickets*) combinados con documentos en PDF para la parte generativa, y si es viable, buscar la ampliación a otras áreas de la empresa.
+
+### RIESGO:
+* Clasificación incorrecta de la severidad (falsos negativos en incidencias críticas).
+* Posibles "alucinaciones" del modelo si se habilitan respuestas automáticas sin supervisión.
+* Mantenimiento de la base de conocimiento para que el modelo no dé soluciones obsoletas.
+
 ## PreiceOptimize AI
 
 ## AgroSmart Predictv
