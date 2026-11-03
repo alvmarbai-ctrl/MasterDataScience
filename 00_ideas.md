@@ -102,4 +102,77 @@ Comenzar por un pequeño departamento para ver su viabilidad, utilizando dataset
 
 ## PreiceOptimize AI
 
+### Descripción
+
+Desarrollo de un sistema de Machine Learning capaz de recomendar precios dinámicos para productos de un comercio electrónico. El modelo calculará la elasticidad precio-demanda combinando el histórico de ventas con variables externas (estacionalidad, días festivos) e internas (niveles de inventario, visitas a la web) para sugerir el precio óptimo en el momento exacto, maximizando el beneficio o el volumen de ventas según la estrategia elegida. 
+
+### Problema 
+
+Los e-commerce pierden constantemente margen de beneficio o volumen de ventas por mantener precios estáticos. Reaccionar tarde a picos de demanda, a campañas estacionales o acumular stock inmovilizado genera pérdidas financieras invisibles pero cuantiosas. 
+
+### Usuario
+
+Category Managers, Analistas de Pricing, y Directores de E-commerce o Revenue Management. 
+
+### Solución Actual
+
+Fijación de precios basada en reglas manuales estáticas (coste del producto + margen fijo), análisis rudimentarios en Excel y revisiones periódicas lentas que no tienen en cuenta el comportamiento del usuario en tiempo real ni el exceso de stock. 
+
+### Valor
+
+Automatización de una tarea analítica compleja que permite maximizar los ingresos, optimizar la rotación del inventario (liquidando stock antes de que genere costes de almacenamiento) y reaccionar al mercado sin depender de la intuición humana. 
+
+### Datos 
+
+Histórico transaccional de ventas (tickets, fechas, cantidades), registro histórico de cambios de precio, catálogo de productos (categorías, marcas), datos de tráfico web (clics, carritos abandonados) y un calendario de eventos/festividades. 
+
+### MVP
+
+Un cuadro de mando interactivo (usando Streamlit o Power BI) conectado a un modelo predictivo (como XGBoost o Random Forest) que analice una única categoría de productos de alta rotación. El usuario seleccionará un producto y el sistema le mostrará una curva de elasticidad de demanda y el precio recomendado para la próxima semana. 
+
+### Viabilidad
+
+Alta. Es un proyecto clásico pero muy robusto para un máster de Data Analytics & IA, ya que permite aplicar limpieza de datos intensiva, análisis exploratorio (EDA) profundo, modelos de regresión y creación de dashboards. Existen abundantes datos públicos de e-commerce transaccionales. 
+
+### Riesgo
+
+En un entorno académico es difícil validar el modelo en "producción" real (A/B testing en vivo) para comprobar si el usuario final realmente compraría al precio sugerido por el algoritmo. Además, requiere un trabajo exhaustivo de ingeniería de características (feature engineering) para cruzar bien las fechas y los productos. 
+
 ## AgroSmart Predictv
+
+### Descipción 
+
+Plataforma de Inteligencia Artificial para la agricultura de precisión que integra dos motores: uno de Computer Vision (Redes Neuronales Convolucionales) para detectar enfermedades en las hojas de los cultivos a partir de fotografías, y un modelo de Machine Learning tabular que analiza datos meteorológicos históricos y predicciones climáticas para recomendar pautas de riego optimizadas.
+
+### Problema
+
+Las plagas y enfermedades agrícolas merman significativamente las cosechas porque se detectan demasiado tarde. Paralelamente, existe un uso ineficiente y desproporcionado del agua y los fertilizantes, lo que incrementa los costes operativos y genera un impacto medioambiental negativo. 
+
+### Usuario 
+
+Agricultores, Ingenieros Agrónomos, Cooperativas Agrícolas y Gestores de grandes explotaciones. 
+
+### Solución Actual 
+
+Inspección visual humana in situ (lenta, propensa a errores y dependiente de la experiencia del operario) y sistemas de riego programados por horarios fijos sin importar las condiciones reales de humedad o la previsión de lluvia inminente.
+
+### Valor
+
+Reducción drástica del gasto en agua (fomentando la sostenibilidad), disminución del uso de pesticidas al tratar las enfermedades de forma temprana y focalizada, y aumento general del rendimiento económico de la cosecha. 
+
+### Datos 
+
+Bancos de imágenes etiquetadas de hojas (sanas y con diversas enfermedades), series temporales climáticas (temperatura, precipitación, humedad relativa) y datos simulados de las necesidades hídricas del cultivo. 
+
+
+### MVP
+
+Una aplicación web sencilla o un bot de Telegram donde el agricultor suba una foto de la hoja y el sistema devuelva el diagnóstico (sana o infectada y con qué patología). En paralelo, un módulo en el dashboard que, consumiendo la API meteorológica gratuita para los próximos 3 días, indique si es necesario activar el riego o no. 
+
+### Viabilidad 
+
+Muy buena y visualmente muy atractiva para presentar en la defensa del TFM. Permite al grupo tocar ramas variadas de la IA: Deep Learning (procesamiento de imágenes) y Machine Learning clásico (series temporales/regresión para el clima). Los datasets de imágenes agrícolas públicas son excelentes y están listos para entrenar. 
+
+### Riesgo 
+
+Que el modelo de visión artificial, al ser entrenado con imágenes de laboratorio (muy limpias y bien iluminadas), pierda precisión cuando el usuario suba una foto borrosa, con mala luz o fondos ruidosos tomada desde un teléfono móvil en el campo real. 
