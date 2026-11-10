@@ -6,3 +6,7 @@ Repositorio creado con la finalidad de desarrollar el proyecto de fin de master,
 - José Carlos Fernández Verdejo
 - Alvar Martinez Bailón
 - Javier Ponce Ramírez de la Isla
+
+## Entregas
+
+- Entrega 0 -> - [Entrega 0](Documentos/Entregas/00_ideas.md)
