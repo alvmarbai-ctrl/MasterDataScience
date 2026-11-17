@@ -54,7 +54,13 @@ Comenzar por un pequeño equipo y ver su viabilidad, con sensores comerciales qu
 - Encontrar un club/equipo que nos pueda dar datos reales. 
 - Privacidad en los datos, (pérdida de confianza). 
 - Ajuste del chaleco, que sea incomodo, hay que tenerlo en cuenta. 
-- Datos incompletos, debemos realizar un producto eficiente, validando y realizando seguimientos de datos ausentes.  
+- Datos incompletos, debemos realizar un producto eficiente, validando y realizando seguimientos de datos ausentes.
+
+### Posibles fuentes
+
+- https://zenodo.org/records/16962280?utm_source=chatgpt.com  (Contiene información de una semana y pocos jugadores)
+- https://zenodo.org/records/18986229?preview_file=undefined  (Contiene información similar a la anterior pero una temporada completa)
+- https://zenodo.org/records/10033832?utm_source=chatgpt.com&preview_file=objective-TeamA-2020.zip (Más cantidad de datos por jugador)
 
 ## Sistema Inteligente de Triaje y Resolución Automatizada
 
