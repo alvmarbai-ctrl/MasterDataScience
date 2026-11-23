@@ -1,4 +1,49 @@
-# Ideas para el proyecto de fin de máster.
+# Proyecto de fin de máster.
+## AgroSmart Predictv
+
+### Descipción 
+
+Plataforma de Inteligencia Artificial para la agricultura de precisión que integra dos motores: uno de Computer Vision (Redes Neuronales Convolucionales) para detectar enfermedades en las hojas de los cultivos a partir de fotografías, y un modelo de Machine Learning tabular que analiza datos meteorológicos históricos y predicciones climáticas para recomendar pautas de riego optimizadas.
+
+### Problema
+
+Las plagas y enfermedades agrícolas merman significativamente las cosechas porque se detectan demasiado tarde. Paralelamente, existe un uso ineficiente y desproporcionado del agua y los fertilizantes, lo que incrementa los costes operativos y genera un impacto medioambiental negativo. 
+
+### Usuario 
+
+Agricultores, Ingenieros Agrónomos, Cooperativas Agrícolas y Gestores de grandes explotaciones. 
+
+### Solución Actual 
+
+Inspección visual humana in situ (lenta, propensa a errores y dependiente de la experiencia del operario) y sistemas de riego programados por horarios fijos sin importar las condiciones reales de humedad o la previsión de lluvia inminente.
+
+### Valor
+
+Reducción drástica del gasto en agua (fomentando la sostenibilidad), disminución del uso de pesticidas al tratar las enfermedades de forma temprana y focalizada, y aumento general del rendimiento económico de la cosecha. 
+
+### Datos 
+
+Bancos de imágenes etiquetadas de hojas (sanas y con diversas enfermedades), series temporales climáticas (temperatura, precipitación, humedad relativa) y datos simulados de las necesidades hídricas del cultivo. 
+
+
+### MVP
+
+Una aplicación web sencilla o un bot de Telegram donde el agricultor suba una foto de la hoja y el sistema devuelva el diagnóstico (sana o infectada y con qué patología). En paralelo, un módulo en el dashboard que, consumiendo la API meteorológica gratuita para los próximos 3 días, indique si es necesario activar el riego o no. 
+
+### Viabilidad 
+
+Muy buena y visualmente muy atractiva para presentar en la defensa del TFM. Permite al grupo tocar ramas variadas de la IA: Deep Learning (procesamiento de imágenes) y Machine Learning clásico (series temporales/regresión para el clima). Los datasets de imágenes agrícolas públicas son excelentes y están listos para entrenar. 
+
+### Riesgo 
+
+Que el modelo de visión artificial, al ser entrenado con imágenes de laboratorio (muy limpias y bien iluminadas), pierda precisión cuando el usuario suba una foto borrosa, con mala luz o fondos ruidosos tomada desde un teléfono móvil en el campo real. 
+
+### Posibles fuentes
+- https://huggingface.co/datasets/mohanty/PlantVillage?  (Datos de sensores de suelo y visión artificial (imágenes) para predecir enfermedades en cultivos y optimizar las pautas de riego).
+- https://open-meteo.com/en/docs/historical-weather-api?  (Datos meteorológicos)
+
+# *OTRAS IDEAS DESECHADAS* 
+# Otras ideas no elegidas para el Proyecto de fin de máster.
 
 ## Sport Safe
 
@@ -144,41 +189,4 @@ Alta. Es un proyecto clásico pero muy robusto para un máster de Data Analytics
 
 En un entorno académico es difícil validar el modelo en "producción" real (A/B testing en vivo) para comprobar si el usuario final realmente compraría al precio sugerido por el algoritmo. Además, requiere un trabajo exhaustivo de ingeniería de características (feature engineering) para cruzar bien las fechas y los productos. 
 
-## AgroSmart Predictv
 
-### Descipción 
-
-Plataforma de Inteligencia Artificial para la agricultura de precisión que integra dos motores: uno de Computer Vision (Redes Neuronales Convolucionales) para detectar enfermedades en las hojas de los cultivos a partir de fotografías, y un modelo de Machine Learning tabular que analiza datos meteorológicos históricos y predicciones climáticas para recomendar pautas de riego optimizadas.
-
-### Problema
-
-Las plagas y enfermedades agrícolas merman significativamente las cosechas porque se detectan demasiado tarde. Paralelamente, existe un uso ineficiente y desproporcionado del agua y los fertilizantes, lo que incrementa los costes operativos y genera un impacto medioambiental negativo. 
-
-### Usuario 
-
-Agricultores, Ingenieros Agrónomos, Cooperativas Agrícolas y Gestores de grandes explotaciones. 
-
-### Solución Actual 
-
-Inspección visual humana in situ (lenta, propensa a errores y dependiente de la experiencia del operario) y sistemas de riego programados por horarios fijos sin importar las condiciones reales de humedad o la previsión de lluvia inminente.
-
-### Valor
-
-Reducción drástica del gasto en agua (fomentando la sostenibilidad), disminución del uso de pesticidas al tratar las enfermedades de forma temprana y focalizada, y aumento general del rendimiento económico de la cosecha. 
-
-### Datos 
-
-Bancos de imágenes etiquetadas de hojas (sanas y con diversas enfermedades), series temporales climáticas (temperatura, precipitación, humedad relativa) y datos simulados de las necesidades hídricas del cultivo. 
-
-
-### MVP
-
-Una aplicación web sencilla o un bot de Telegram donde el agricultor suba una foto de la hoja y el sistema devuelva el diagnóstico (sana o infectada y con qué patología). En paralelo, un módulo en el dashboard que, consumiendo la API meteorológica gratuita para los próximos 3 días, indique si es necesario activar el riego o no. 
-
-### Viabilidad 
-
-Muy buena y visualmente muy atractiva para presentar en la defensa del TFM. Permite al grupo tocar ramas variadas de la IA: Deep Learning (procesamiento de imágenes) y Machine Learning clásico (series temporales/regresión para el clima). Los datasets de imágenes agrícolas públicas son excelentes y están listos para entrenar. 
-
-### Riesgo 
-
-Que el modelo de visión artificial, al ser entrenado con imágenes de laboratorio (muy limpias y bien iluminadas), pierda precisión cuando el usuario suba una foto borrosa, con mala luz o fondos ruidosos tomada desde un teléfono móvil en el campo real. 
