@@ -218,3 +218,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Entornos y caché de Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# Datos locales generados (se excluyen por peso; se documenta su generación en data/README.md)
+data/raw/*
+data/silver/*
+!data/raw/.gitkeep
+!data/silver/.gitkeep
